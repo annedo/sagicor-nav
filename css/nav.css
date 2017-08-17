@@ -1,0 +1,273 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*************************End CSS Reset**************************************/
+/* Modular Scale: http://www.modularscale.com/?1&em&1.25 */
+html {
+  	box-sizing: border-box;
+  	font-family: Arial;
+  	font-size: 14px;
+  	color: #444;
+}
+
+*, *:before, *:after {
+  	box-sizing: inherit;
+}
+
+body {
+	line-height: 1.5rem;
+	justify-content: space-between;
+}
+
+h1 {
+	font-size: 3.052rem;
+	line-height: 1.01em;
+	padding-bottom: 2.441rem;
+	font-weight: bold;
+}
+
+h2 {
+	font-size:  2.441rem;
+	padding-bottom: 1.953rem;
+	line-height: 1.01em;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 1.953rem;
+	line-height: 1.01em;
+	padding-bottom: 1.563rem;
+	font-weight: bold;
+}
+
+p {
+	margin-bottom: 1.25em;
+}
+
+strong {
+	font-weight: bold;
+	font-size: 1.1em;
+	line-height: 1.5em;
+}
+
+/******Special Styles*******/
+.l-wrapper__all {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 100vw;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: inline-block;
+}
+
+/********************Heading Nav***********************/
+.l-wrapper__nav {
+    text-align: center;
+    width: 100%;
+    background-color: #fff;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.nav {
+    width: 100%;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: space-around;
+    z-index: 50;
+    font-size: 12px;
+}
+	
+	.nav--widescreens {
+		display: none;
+	}
+
+	.nav__header {
+		width: 100%;
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: space-around;
+		border-bottom: 1px solid #eee;
+	}
+
+		.l-nav__logo {
+			padding: 15px 10px 10px 0;
+			margin-left: -8px;
+		}
+
+			.nav__logo {
+				max-width: 200px;
+			}
+
+		.l-menucontrol {
+			cursor: pointer;
+		}
+
+			.menu--line {
+				position: relative;
+			    height: 3px;
+			    width: 18px;
+			    background-color: rgb(89, 89, 92);
+			    margin: 0px 0px 3px;
+			    transition: 0.25s;
+			}
+
+			.menu--line1--open{
+				transform: rotate3d(0,0,1,45deg);
+				top: 6px;
+			}
+
+			.menu--line2--open{
+				opacity: 0;
+			}
+
+			.menu--line3--open{
+				transform: rotate3d(0,0,1,-45deg);
+				top: -6px;
+			}
+
+	.toggle-hide {
+		display: block;
+		max-height: 0px;
+		overflow: hidden;
+	}
+
+	.toggle-show-main {
+		max-height: 1400px;
+		overflow: hidden;
+	}
+
+	.toggle-show-sub {
+		max-height: 500px;
+		border-top: 1px solid rgba(128,128,128,.2);
+	}
+
+	.nav__list {
+		width: 100%;
+		transition: max-height 1.2s;
+		border-bottom: 1px solid #eee;
+	}
+
+		.nav__item {
+			display: block;
+		    text-align: left;
+		    cursor: pointer;
+		}
+
+		.nav__item:hover, .nav__subitem:hover, .nav__subsubitem:hover {
+			background-color: rgba(0,0,0,.03);
+		}
+			.l-nav__link {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding-right: 2rem;
+				border-top: 1px solid rgba(128,128,128,.2);
+			}
+
+				.nav__link {
+					display: block;
+				    text-decoration: none;
+				    text-transform: uppercase;
+				    font: normal normal bold normal 13px / 55px Arial, Helvetica, sans-serif;
+				    padding: 0px 20px;
+				    color: #59595c;
+				    font-weight: bold;
+				}
+
+				.nav__link--down {
+					text-align: right;
+				}
+
+			.nav__sublist {
+					background-color: #FFF;
+					transition: max-height 0.7s;
+				}
+
+				.nav__sublink, .nav__subsublink {
+				    color: rgb(68, 68, 68);
+				    display: block;
+				    text-decoration: none;
+				    padding: 12px 15px 12px 25px;
+				}
+
+				.nav__subsublist {
+					padding-left: 5px;
+					background-color: #FFF;
+				}
+
+	.menu--up {
+		z-index: 300;
+	    height: 45px;
+	    width: 45px;
+	    position: fixed;
+	    bottom: 10%;
+	    right: 5%;
+	    text-decoration: none solid rgb(130, 195, 65);
+	    background-color: rgba(0,0,0,.2);
+	    transition: .2s;
+	}
+
+	.menu--up:hover {
+		background-color: rgba(0,0,0,.3)
+	}
+
+	.menu--chevron {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}

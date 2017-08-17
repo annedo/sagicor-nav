@@ -1,0 +1,81 @@
+@media screen and (min-width: 768px) {
+	html {
+		font-size: 16px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	html {
+		font-size: 17px;
+	}
+
+/**************Nav Styles*********/
+.nav--smallscreens {
+		display: none;
+	}
+
+.nav--widescreens {
+	display: block;
+}
+
+.nav__header {
+	justify-content: space-between;
+	margin: auto;
+	max-width: 1140px;
+	font-size: 12px;
+	border: none;
+}
+	.l-nav__logo {
+		padding: 5px 0 0;
+		margin: 0;
+	}
+
+	.nav--widescreens .nav__sublist {
+		transition: 0s;
+	}
+
+	.l-wrapper__nav {
+		display: flex;
+		border-bottom: 1px solid #ddd;
+		color: #59595c;
+	}
+
+	.nav__list {
+		display: flex;
+		justify-content: flex-end;
+		border: none;
+	}
+
+		.nav__item {
+			text-align: center;
+			position: relative;
+			z-index: 100;
+		}
+
+			.nav__link {
+				font-size: 12px;
+				border: none;
+			}
+
+			.nav__sublist {
+				width: 191px;
+				text-align: left;
+				position: absolute;
+				text-transform: uppercase;
+				border: none;
+			}
+
+			.nav__sublink {
+				color: #59595c;
+				padding: 15px 20px;
+				letter-spacing: 1px;
+				line-height: 18px;
+			}
+
+		.toggle-show-sub {
+			box-shadow: 0 20px 50px 10px rgba(0, 0, 0, 0.15);
+		}
+
+		#empty_careers {
+			box-shadow: none;
+		}
